@@ -9,7 +9,8 @@ jobs:
       # the base image can run most needed actions with orbs
       - image: "cimg/base:stable"
     steps:
-      - node/install
+      - node/install:
+          install-yarn: true
       - checkout
       # install dependencies in both apps
       - run:
